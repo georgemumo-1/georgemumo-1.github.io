@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Surprise ❤️</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #ff00dc;
+    }
+
+    /* Section Container */
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      box-sizing: border-box;
+      margin: 10px 0;
+    }
+
+     /* Header Section with Animated Glowing Letters */
+    .header {
+      background-color: #ff6b6b;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      text-transform: uppercase;
+      border-radius: 40px;
+    }
+
+    .header span {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ffebeb, 0 0 20px #ff6b6b, 0 0 30px #ff758c; color: #fff; }
+      100% { text-shadow: 0 0 20px #ff9a8b, 0 0 30px #ffb3b3, 0 0 40px #ffc3a0; color: #ffe6eb; }
+    }
+
+    .header span:nth-child(1) { animation-delay: 0.1s; color: #ff6b6b; }
+    .header span:nth-child(2) { animation-delay: 0.2s; color: #ffb3b3; }
+    .header span:nth-child(3) { animation-delay: 0.3s; color: #ff9a8b; }
+    .header span:nth-child(4) { animation-delay: 0.4s; color: #ffccdd; }
+    .header span:nth-child(5) { animation-delay: 0.5s; color: #ffe6eb; }
+    .header span:nth-child(6) { animation-delay: 0.6s; color: #ff758c; }
+
+    /* Surprise Section */
+    .surprise-section {
+      background-color: #ff758c;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    /* Surprise Button */
+    .surprise-button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff6b6b, #ffb3b3);
+      border: none;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 100, 100, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 10;
+      position: relative;
+    }
+
+    .surprise-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(255, 100, 100, 0.7);
+    }
+
+    /* Burst Emojis */
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: burst 3s forwards;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    @keyframes burst {
+      0% { transform: scale(0) translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: scale(1.5) translateY(-300px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Message Section */
+    .message-section {
+      background: url('beautiful-1709189819.jpg') no-repeat center center;
+      background-size: cover;
+      color: #ffebeb;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+    }
+
+    .message-section p {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      display: inline-block;
+    }
+
+    /* Surprise Section */
+    .surprise-section {
+      background-color: #ffeaff;
+      color: #560076;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Surprise Button */
+    .surprise-button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff6b6b, #ff00dc);
+      border: none;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 100, 100, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 10;
+      position: relative;
+    }
+
+    .surprise-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(255, 100, 100, 0.7);
+    }
+
+    /* Burst Emojis */
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: burst 3s forwards;
+      opacity: 0;
+      z-index: 1;
+    }
+    /* Hidden Surprise Text */
+    .surprise-text {
+      display: none;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #830087;
+      margin-top: 20px;
+      animation: surpriseTextFade 1.5s ease-in-out;
+    }
+
+    @keyframes surpriseTextFade {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes burst {
+      0% { transform: scale(0) translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: scale(1.5) translateY(-300px) rotate(720deg); opacity: 0; }
+    }
+     .section1 {
+      text-align: center;
+      padding: 50px 20px;
+      box-sizing: border-box;
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6b6b;
+      text-shadow: 0 0 15px #ff6b6b, 0 0 30px #ff9a8b;
+    }
+
+    /* Section 2: Our Song */
+    .song-section {
+      background: linear-gradient(135deg, #d5f4ff, #ffeaff);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(255, 120, 150, 0.5);
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 80%;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    /* Section 3: Floating Hearts */
+    .heart-gallery {
+      position: relative;
+      height: 300px;
+      background: linear-gradient(135deg, #65ff00, #1c15ff);
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(255, 120, 150, 0.5);
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 2rem;
+      color: #fff;
+      animation: floatUp 10s infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100%); opacity: 0.8; }
+      100% { transform: translateY(-100%); opacity: 0; }
+    }
+
+    /* Section 4: Promises */
+    .promises-section {
+      background: linear-gradient(135deg, #22223b, #4a4e69);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(100, 100, 150, 0.5);
+    }
+
+    .promises-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .promises-section li {
+      font-size: 1.4rem;
+      margin: 10px 0;
+      padding: 10px 15px;
+      color: #ffe6eb;
+      background: rgba(255, 120, 150, 0.2);
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+      transition: transform 0.3s;
+    }
+
+    .promises-section li:hover {
+      transform: scale(1.05);
+      background: rgba(255, 120, 150, 0.4);
+    }
+
+    /* Section 5: Why I Love You */
+    .love-reasons-section {
+      background: linear-gradient(135deg, #ff758c, #ff9a8b);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(255, 120, 150, 0.5);
+    }
+
+    .love-reasons-section p {
+      font-size: 1.6rem;
+      margin-top: 20px;
+      color: #ffe6eb;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #22223b;
+      color: #ffb3b3;
+      font-size: 1.2rem;
+      padding: 20px;
+    }
+
+    .footer span {
+      font-style: italic;
+      color: #ff758c;
+    }
+
+  </style>
+</head>
+<body>
+ <div class="section header">
+    <span>T</span>
+    <span>O</span>
+    <span>&nbsp;</span>
+    <span>M</span>
+    <span>I</span>
+    <span>T</span>
+    <span>C</span>
+    <span>H</span>
+    <span>E</span>
+    <span>L</span>
+    <span>L</span>
+  </div>
+  <!-- Message Section -->
+<div class="section message-section">
+  <div>
+    <p>
+      "To the one my heart beats for, someone I love with every piece of my soul, yet we have not yet met.  
+      The day we'll meet feels like a lifetime away, but I know it marks the beginning of something beautiful—our journey together."
+    </p>
+  </div>
+</div>
+
+  <!-- Surprise Section -->
+  <div class="section surprise-section">
+  <button class="surprise-button" onclick="burstEmojisAndReveal()">Tap for a Surprise ✨</button>
+         <!-- Hidden Surprise Text -->
+<div id="surprise-text" class="surprise-text">
+  "You are the dream that keeps me awake at night and the hope that fills my days.  
+  I may not have held your hand yet, but I hold you in my heart every moment.  
+  The day you gonna give you ur heart will be the start of forever, my love. 💖❤️"
+</div>
+  </div>
+<div class="section1 song-section">
+    <h2>Special Song For you🎶</h2>
+    <audio controls>
+      <source src="AUD-20241216-WA0090.m4a">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+
+  <!-- Section 3: Floating Hearts -->
+  <div class="section1 heart-gallery">
+    <h2>Little Notes of Love for You 💌</h2>
+    <div class="floating-heart" style="left: 20%; animation-delay: 0s;">"You are my forever."</div>
+    <div class="floating-heart" style="left: 40%; animation-delay: 2s;">"Every second with you will be magic."</div>
+    <div class="floating-heart" style="left: 60%; animation-delay: 4s;">"I’ll hold your hand through everything."</div>
+    <div class="floating-heart" style="left: 80%; animation-delay: 6s;">"You complete me."</div>
+  </div>
+
+  <!-- Section 4: Promises -->
+  <div class="section1 promises-section">
+    <h2>My Promises to You 💖</h2>
+    <ul>
+      <li>🌹 I promise to always support and uplift you.</li>
+      <li>❤️ I promise to make you smile every day.</li>
+      <li>💌 I promise to listen and care for your heart.</li>
+      <li>💝 I promise to cherish every moment with you.</li>
+      <li>🌟 I promise to be your peace, strength, and love.</li>
+    </ul>
+  </div>
+
+  <!-- Section 5: Why I Love You -->
+  <div class="section1 love-reasons-section">
+    <h2>Why I Love You ❤️</h2>
+    <p id="reason">"Your smile brightens my darkest days."</p>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="section footer">
+    Beautifully designed with ❤️ by <span>George Mumo</span>
+  </div>
+
+  <!-- JavaScript for Bursting Emojis -->
+ <script>
+  function burstEmojisAndReveal() {
+    // Reveal the surprise text
+    const surpriseText = document.getElementById('surprise-text');
+    surpriseText.style.display = 'block';
+
+    // Emoji burst animation
+    const emojis = ["😍", "💖", "💝", "❤️", "🥰", "😘", "❤️‍🔥", "😻", "💌", "❣️", "❤️", "💝", "💖", "💗", "💓"];
+    const container = document.querySelector('.surprise-section');
+
+    for (let i = 0; i < 50; i++) { // Create 50 bursting emojis
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      
+      const randomX = Math.random() * window.innerWidth - 50;
+      const randomDelay = Math.random() * 1.5;
+
+      emoji.style.left = `${randomX}px`;
+      emoji.style.animationDelay = `${randomDelay}s`;
+      
+      container.appendChild(emoji);
+
+      setTimeout(() => emoji.remove(), 3000); // Remove emoji after animation
+    }
+  }
+  // Section 5: Rotate Love Reasons
+    const reasons = [
+      "Your smile brightens my darkest days.",
+      "You make me feel understood and cared for.",
+      "Your kindness and heart inspire me every day.",
+      "Even before meeting you, you’ve changed my life.",
+      "I know we are destined to share forever."
+    ];
+
+    let index = 0;
+    function displayReason() {
+      const reasonElement = document.getElementById('reason');
+      reasonElement.innerText = reasons[index];
+      index = (index + 1) % reasons.length;
+    }
+
+    setInterval(displayReason, 2000); // Show a new reason every 2 seconds
+</script>
+</body>
+</html>
